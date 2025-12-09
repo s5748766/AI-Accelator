@@ -128,6 +128,22 @@
 - 딥러닝 제 3 공식
 <img width="646" height="44" alt="image" src="https://github.com/user-attachments/assets/42f6e6fe-d02c-4814-ac08-5cedeeee13ae" />
 
-- E에 대한 y 방향의 기울기를 나타냄
+- yE에 대한 y 방향의 기울기를 나타냄
 - w와 b의 값을 변경해야함
-- 
+- 역전파에 사용할 오차값을 의미
+- 기울기가 0인 지점을 찾는 것이 목표
+
+### 딥러닝 제 4 공식 : 입력 역전파
+- 딥러닝 제 4 공식
+<img width="927" height="268" alt="image" src="https://github.com/user-attachments/assets/20aa0562-8aa7-4219-8f61-1a23c69c3e1a" />
+
+- xE의 오차는 yE의 오차 * w
+- 기울기(-3)를 거꾸로 보냄
+
+### 딥러닝 제 5 공식 : 가중치, 편향 순전파
+- 딥러닝 제 5 공식
+<img width="963" height="334" alt="image" src="https://github.com/user-attachments/assets/ee98a5c5-1b4b-4e61-b6ba-7cfa13090077" />
+
+### 딥러닝 제 6 공식 : 가중치, 편향 역전파
+- 딥러닝 제 6 공식
+<img width="833" height="241" alt="image" src="https://github.com/user-attachments/assets/a6322693-8f32-41ac-8ff4-b351ebdd1b9b" />
