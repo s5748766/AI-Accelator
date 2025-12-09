@@ -1,6 +1,7 @@
 # AI-Accelator
 ## 자료
 [_CH02_딥러닝_알고리즘_1_딥러닝_7공식_73.pdf](https://github.com/user-attachments/files/24045586/_CH02_._._1_._7._73.pdf)
+
 [_CH03_딥러닝_알고리즘_2_활성화함수_69.pdf](https://github.com/user-attachments/files/24045636/_CH03_._._2_._69.pdf)
 
 ## 인공 신경망 (Artificial Neural Networks - ANN)
