@@ -147,3 +147,156 @@
 ### 딥러닝 제 6 공식 : 가중치, 편향 역전파
 - 딥러닝 제 6 공식
 <img width="833" height="241" alt="image" src="https://github.com/user-attachments/assets/a6322693-8f32-41ac-8ff4-b351ebdd1b9b" />
+
+### 딥러닝 제 7 공식 : 신경망 학습
+- 딥러닝 제 7 공식
+<img width="712" height="81" alt="image" src="https://github.com/user-attachments/assets/ff1c87ae-9f7f-42e8-88bf-cc3f3a634aee" />
+
+- wE는 가중치 역전파 오차, bE는 편향 역전파 오차
+- lr(learning rate)은 학습률을 의미
+
+
+
+#### 신경망 학습 (파이썬)
+- 신경망 학습
+<img width="349" height="183" alt="image" src="https://github.com/user-attachments/assets/c5110581-8a22-4955-820d-70d0401c5eb2" />
+
+- 학습률 적용
+<img width="350" height="190" alt="image" src="https://github.com/user-attachments/assets/3169ecc8-3155-427b-a8bc-a6cca03a4a71" />
+
+- α는 학습률을 의미
+- 학습률의 값은 0.001로 시작하여 학습이 진행되는 상황에 따라 조금씩 늘리거나 줄여서 사용
+
+```
+x = 2
+w = 3
+b = 1
+yT = 10 
+lr  = 0.01
+
+for epoch in range(1800):
+    y = x * w + 1 * b
+    E = (y - yT)**2 / 2
+    yE = y - yT
+    wE = yE*x
+    bE = yE*1
+    w -= lr*wE
+    b -= lr*bE
+    print(f'epoch = {epoch}')
+    print(f' y : {y:.3f}')
+    print(f' w : {w:.3f}')
+    print(f' b : {b:.3f}')
+    
+    if E < 0.0000001 :
+        break
+
+```
+
+### 딥러닝 반복 학습
+<img width="321" height="187" alt="image" src="https://github.com/user-attachments/assets/bf27ddea-893e-442e-a3d0-203e515210a6" />
+
+## 연습문제
+### 문제 1
+<img width="570" height="636" alt="image" src="https://github.com/user-attachments/assets/a2418d72-f965-40e4-a813-3b6776e36d95" />
+
+```
+x1, x2 = 0.05, 0.10
+w1, w2, w3, w4, w5, w6 = 0.15, 0.20, 0.25, 0.30, 0.40, 0.55
+b1, b2, b3 = 0.35, 0.45, 0.60
+y1T, y2T, y3T= 0.01, 0.99, 0.50
+lr = 0.01
+
+for epoch in range(2000):
+    y1 = x1*w1 + x2*w2 + 1*b1
+    y2 = x1*w3 + x2*w4 + 1*b2
+    y3 = x1*w5 + x2*w6 + 1*b3
+    E = ((y1-y1T)**2 + (y2-y2T)**2 + (y3-y3T)**2)/2
+    y1E = y1-y1T
+    y2E = y2-y2T
+    y3E = y3-y3T
+    w1E = y1E*x1
+    w2E = y1E*x2
+    b1E = y1E*1
+    w3E = y2E*x1
+    w4E = y2E*x2
+    b2E = y2E*1
+    w5E = y3E*x1
+    w6E = y3E*x2
+    b3E = y3E*1
+    w1 = w1-lr*w1E
+    w2 = w2-lr*w2E
+    b1 = b1-lr*b1E
+    w3 = w3-lr*w3E
+    w4 = w4-lr*w4E
+    b2 = b2-lr*b2E
+    w5 = w5-lr*w5E
+    w6 = w6-lr*w6E
+    b3 = b3-lr*b3E
+       
+    
+    if E < 0.0000001:
+        print(f'epoch = {epoch}')
+        print(f' y1 : {y1:.3f}')
+        print(f' y2 : {y2:.3f}')
+        print(f' y3 : {y3:.3f}')
+        print(f' w1 : {w1:.3f}')
+        print(f' w2 : {w2:.3f}')
+        print(f' b1 : {b1:.3f}')
+        print(f' w3 : {w3:.3f}')
+        print(f' w4 : {w4:.3f}')
+        print(f' b2 : {b2:.3f}')
+        print(f' w5 : {w5:.3f}')
+        print(f' w6 : {w6:.3f}')
+        print(f' b3 : {b3:.3f}')
+        break
+```
+
+### 문제 2
+<img width="570" height="770" alt="image" src="https://github.com/user-attachments/assets/13ab9f95-14fd-4c54-b455-51e5b8d9c488" />
+
+```
+x1, x2, x3 = 0.02, 0.05, 0.12
+w1, w2, w3, w4, w5, w6 = 0.15, 0.20, 0.02, 0.27, 0.37, 0.52
+b1, b2 = 0.12, 0.39
+y1T, y2T = 0.02, 0.98
+lr = 0.01
+
+for epoch in range(2000):
+    y1 = x1*w1 + x2*w2 + x3*w3 + 1*b1
+    y2 = x1*w4 + x2*w5 + x3*w6 + 1*b2
+    E = ((y1-y1T)**2 + (y2-y2T)**2)/2
+    y1E = y1-y1T
+    y2E = y2-y2T
+    
+    w1E = y1E*x1
+    w2E = y1E*x2
+    w3E = y1E*x3
+    b1E = y1E*1
+    w4E = y2E*x1
+    w5E = y2E*x2
+    w6E = y2E*x3
+    b2E = y2E*1
+    
+    w1 = w1-lr*w1E
+    w2 = w2-lr*w2E
+    w3 = w3-lr*w3E
+    b1 = b1-lr*b1E
+    w4 = w4-lr*w4E
+    w5 = w5-lr*w5E
+    w6 = w6-lr*w6E
+    b2 = b2-lr*b2E
+    
+    if E < 0.0000001:
+        print(f'epoch = {epoch}')
+        print(f' y1 : {y1:.3f}')
+        print(f' y2 : {y2:.3f}')
+        print(f' w1 : {w1:.3f}')
+        print(f' w2 : {w2:.3f}')
+        print(f' w3 : {w3:.3f}')
+        print(f' b1 : {b1:.3f}')
+        print(f' w4 : {w4:.3f}')
+        print(f' w5 : {w5:.3f}')
+        print(f' w6 : {w6:.3f}')
+        print(f' b2 : {b2:.3f}')
+        break
+```
