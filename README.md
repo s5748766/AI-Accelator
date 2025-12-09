@@ -101,6 +101,8 @@
 ## 딥러닝 7 공식!
 - 딥러닝 7 공식을 이용하여 딥러닝의 동작 원리 이해
 - 순전파, 목표값, 오차, 역전파 오차, 역전파, 학습률
+- 학습 방법 : 가중치 w와 편향 b의 값을 조정
+
 ### 딥러닝 제 1 공식 : 순전파
 <img width="295" height="149" alt="image" src="https://github.com/user-attachments/assets/5826b511-f627-4c7a-9368-a0e880f8c41e" />
 
@@ -109,4 +111,11 @@
 
 #### 순전파 수식
 - y는 예측값, x는 입력값, w는 가중치, b는 편향
-<img width="536" height="142" alt="image" src="https://github.com/user-attachments/assets/ba4c2e1c-9077-443f-8421-08d67e590243" />
+<img width="539" height="146" alt="image" src="https://github.com/user-attachments/assets/c5e3540d-c937-4c8e-8093-5692d3b44b86" />
+
+### 딥러닝 제 2 공식 : 평균 제곱 오차
+- 딥러닝 제 2 공식
+<img width="644" height="44" alt="image" src="https://github.com/user-attachments/assets/0f992f7b-b58f-4d26-8835-3d3caeaa9651" />
+
+
+
