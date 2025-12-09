@@ -98,4 +98,15 @@
 ### 파이썬으로 구현
 <img width="677" height="618" alt="image" src="https://github.com/user-attachments/assets/080b8d92-7781-4229-b4d3-fdbff996859a" />
 
+## 딥러닝 7 공식!
+- 딥러닝 7 공식을 이용하여 딥러닝의 동작 원리 이해
+- 순전파, 목표값, 오차, 역전파 오차, 역전파, 학습률
+### 딥러닝 제 1 공식 : 순전파
+<img width="295" height="149" alt="image" src="https://github.com/user-attachments/assets/5826b511-f627-4c7a-9368-a0e880f8c41e" />
 
+- 입력 노드 1개, 출력 노드 1개, 편향으로 구성된 단일 인공 신경
+- 이 인공 신경을 학습 시키면 다음과 같이 가중치와 편향의 값이 바뀌게 됩니다. 즉, 신호 전달 강도가 더 세지거나 약해짐
+
+#### 순전파 수식
+- y는 예측값, x는 입력값, w는 가중치, b는 편향
+<img width="536" height="142" alt="image" src="https://github.com/user-attachments/assets/ba4c2e1c-9077-443f-8421-08d67e590243" />
