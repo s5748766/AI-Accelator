@@ -50,3 +50,11 @@
 
 - 수식 : y = x*w + 1*b
 - 인공 신경의 학습과정은 가중치 W와 편향 B의 값을 조절하는 과정이며, 인공 신경이 적절히 학습되면 입력값 X에 대해 원하는 출력값 Y가 나오게 됨
+
+#### 퍼셉트론
+- 퍼셉트론 : 여러 입력을 받아 하나의 출력을 내보내는 가장 기본적인 형태의 인공신경망 모델
+<img width="443" height="231" alt="image" src="https://github.com/user-attachments/assets/cc8254cd-27d4-4ce3-976a-2cca9f73e6d4" />
+
+<img width="492" height="173" alt="image" src="https://github.com/user-attachments/assets/533e84b9-8752-47d9-9f50-579ec6bef912" />
+
+- t-y는 축삭돌기에서 축삭돌기 말를 표현
