@@ -1,4 +1,7 @@
 # AI-Accelator
+## 자료
+[_CH02_딥러닝_알고리즘_1_딥러닝_7공식_73.pdf](https://github.com/user-attachments/files/24045586/_CH02_._._1_._7._73.pdf)
+
 ## 인공 신경망 (Artificial Neural Networks - ANN)
 - 생체 신경망과 같이 인공 신경망은 커다란 망으로 함께 연결되어 있는 인공신경을 기반으로 구성되어 있음
 - 각각의 인공신경은 생체 신경과 같이 간단한 신호 처리가 가능하도록 구현되어있음
@@ -117,5 +120,12 @@
 - 딥러닝 제 2 공식
 <img width="644" height="44" alt="image" src="https://github.com/user-attachments/assets/0f992f7b-b58f-4d26-8835-3d3caeaa9651" />
 
+- 1 공식에서 나온 y = 7이라는 값을 목표한 10이라는 값으로 바꾸고 싶은데, 이 경우 yT에 10을 넣고 평균 제곱 오차 계산!
 
+### 딥러닝 제 3 공식 : 역전파 오차
+- 딥러닝 제 3 공식
+<img width="646" height="44" alt="image" src="https://github.com/user-attachments/assets/42f6e6fe-d02c-4814-ac08-5cedeeee13ae" />
 
+- E에 대한 y 방향의 기울기를 나타냄
+- w와 b의 값을 변경해야함
+- 
