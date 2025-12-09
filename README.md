@@ -51,10 +51,51 @@
 - 수식 : y = x*w + 1*b
 - 인공 신경의 학습과정은 가중치 W와 편향 B의 값을 조절하는 과정이며, 인공 신경이 적절히 학습되면 입력값 X에 대해 원하는 출력값 Y가 나오게 됨
 
-#### 퍼셉트론
+## 퍼셉트론
 - 퍼셉트론 : 여러 입력을 받아 하나의 출력을 내보내는 가장 기본적인 형태의 인공신경망 모델
+
+### 구조
 <img width="443" height="231" alt="image" src="https://github.com/user-attachments/assets/cc8254cd-27d4-4ce3-976a-2cca9f73e6d4" />
 
 <img width="492" height="173" alt="image" src="https://github.com/user-attachments/assets/533e84b9-8752-47d9-9f50-579ec6bef912" />
 
 - t-y는 축삭돌기에서 축삭돌기 말를 표현
+- t : threshold (역치)
+- x1, x2 : 1 or 0 값 중 하나
+
+### 동작 원리
+- x1과 x2는 각각 w1과 w2에 곱해져 s로 전달 : s=x1*w1+x2*w2
+- s는 t보다 크면 y로 1이 전달, 그렇지 않으면 0이 전달
+- t값이 작을 수록 yfh 쉽게 신호 (1)이 전달 됨
+- ex) t = 0.1이면 s값은 0.1만 넘으면 y로 1이 전
+
+<img width="380" height="87" alt="image" src="https://github.com/user-attachments/assets/e74f03f8-25f2-459a-bd16-d2257962beb7" />
+
+### 퍼셉트론과 논리 게이트
+#### AND 게이트
+<img width="1029" height="331" alt="image" src="https://github.com/user-attachments/assets/41bdb675-f121-40f1-8472-2915cb407897" />
+
+#### NAAD 게이트
+<img width="1023" height="268" alt="image" src="https://github.com/user-attachments/assets/ae8dc2e8-ed58-4cdd-b9b1-a27c684c2453" />
+
+#### OR 게이트
+<img width="1020" height="266" alt="image" src="https://github.com/user-attachments/assets/92cd8624-a15c-4085-b77e-2657d85a10c8" />
+
+### 퍼셉트론 구현 (파이썬)
+
+### 퍼셉트론 한계 XOR 게이트
+- 초기에 단층 신경망으로 구성
+- XOR 게이트에서 2번 식과 8번 식를 동시에 만족할 수 없음
+<img width="1019" height="293" alt="image" src="https://github.com/user-attachments/assets/d2e860cd-b506-4fa4-9958-f3b9e824c13b" />
+
+### 다층 퍼셉트론으로 해결 XOR 게이트
+- 다층 퍼셉트론 : 입력층, 은닉층, 출력층으로 구성
+<img width="1020" height="199" alt="image" src="https://github.com/user-attachments/assets/f166d36a-484e-4aca-986d-09658bacb238" />
+
+- 두개의 입력값, 하나의 출력값을 가진 단층 퍼셉트론 3개를 조합
+<img width="667" height="217" alt="image" src="https://github.com/user-attachments/assets/8b7b56bc-8b4c-4521-94a2-ff4678c40a8c" />
+
+### 파이썬으로 구현
+<img width="677" height="618" alt="image" src="https://github.com/user-attachments/assets/080b8d92-7781-4229-b4d3-fdbff996859a" />
+
+
